@@ -1,177 +1,73 @@
-#define _CRT_SECURE_NO_WARNINGS
+ï»¿#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
-
-
-#define cnt 50
-
-int main() {
-
-	int data[cnt]; //= { 10,20,30,40,50 }; //data[0] ~data[4]
+#include <time.h> // timeê³¼ stdlibì— ê°ê° timeí•¨ìˆ˜ì™€ srand í•¨ìˆ˜ê°€ ì¡´ì¬
+#define cnt 100
+/*int main() {
+	int data[cnt];
 	int total = 0;
 	int max = 0;
-	int min = 0;
-	srand(time(NULL));
-	//printf("%d %d\n", rand() % 100, rand());
+	int min = 100;
+	srand(time(NULL)); // srandëŠ” ë‚œìˆ˜ë°œìƒê¸° ()ëŠ” ì‹œì‘ê°’ì„ ë„£ëŠ” ê±°ê³  ì‹œì‘ê°’ì— time(NULL)ì„ ë„£ì€ ê±°ê³   time()ì€ í˜„ì¬ ì‹œê°„ì„ ì´ˆë‹¨ìœ„ë¡œ ë°˜í™˜í•˜ê±°ê³  NULLì„ ë„£ìœ¼ë©´ í˜„ì¬ ì‹œê°„ì„ ë°˜í™˜í•˜ë¼ì„
 	for (int i = 0; i < cnt; i++) {
-		data[i] = rand() % 100;
-
+		data[i] = rand() % 100 + 1;
+		printf("%3d", data[i]);
+		(i + 1) % 10 ? printf(" ") : printf("\n"); //ì¡°ê±´ ? ì°¸ì¼ ë•Œ ì‹¤í–‰ : ê±°ì§“ì¼ ë•Œ ì‹¤í–‰
 		total += data[i];
-
-		printf("data[%d] =%d \n", i, data[i]);
-		//printf("data[%d]ÀÇ ÁÖ¼Ò =%p\n", i, &data[i]);
-	}
-	
-	printf("ÃÑÁ¡ =%d\n", total);
-	printf("Æò±Õ =%.2f\n", total / (float)cnt); // total ¾Õ¿¡ (float)ºÙ¿©µµ µÊ cnt´Â 100ÇÏ¸é 100°³ ¸¸µë
-
-		/*printf("Á¡¼ö ÀÔ·Â =>");
-		scanf("%d", &data[i]);
-	}*/
-	/*for (int i = 0; i < 5; i++) {
-		printf("data[%d] =%d \n",i,data[i]);
-		printf("data[%d]ÀÇ ÁÖ¼Ò =%p\n", i, &data[i]);
-	}*/
-	for (int i = 0; i < cnt; i++) {
-		if (max <= data[i])
+		if (max <= data[i]) { //ë¹„êµì—°ì‚°ì ìì£¼ í‹€ë¦¬ê³  forë¬¸ì—ì„œ ì–´ë””ê¹Œì§€ ê´„í˜¸ì³ì•¼ í• ì§€ í—·ê°ˆë¦¼
 			max = data[i];
-	}
-	printf("ÃÖ´ñ°ªÀº %d ", max);
-
-	for (int i = 0; i < cnt; i++) {
-		if (min > data[i])
+		}
+		if (min >= data[i])
+		{
 			min = data[i];
+		}
 	}
-	printf("ÃÖ¼Ò°ªÀº %d ", min);
-	return 0;
+	printf("total =%d\n", total);
+	printf("average =%.2f\n", total / (float)cnt); // total ì•ì— (float)ë¶™ì—¬ë„ ë¨ 
+	printf("max=%d min=%d", max, min);
+    return 0;
 }
-
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <time.h>
-#include <stdlib.h>
-
-
-#define cnt 50
 
 int main() {
+    int data[5];
+    int total = 0;
+    int max;
+    int min;
 
-	//int data[cnt]; //= { 10,20,30,40,50 }; //data[0] ~data[4]
-	int data[5][2] = { 80,90,50,70,90,80,70,50,90,80 };
-	int total1 = 0;
-	int total2 = 0;
-	for (int j = 0; j < 5; j++) {
-		for (int i = 0; i < 2; i++) {
-			printf("%d", data[j][i]);
-			if (i == 0) {
-				printf(" ");
-				total1 += data[j][i];
-			}
-			else {
-				printf("\n");
-				total2 += data[j][i];
-			}
+    for (int i = 0; i < 5; i++) {
+        printf("enter score => ");
+        scanf_s("%d", &data[i]);
 
-		}
-		printf("ÃÑÇÕÀº %d\t %d\n", total1, total2);
-	}
-	return 0;
-}
-//int total = 0;
-//int max = 0;
-//int min = 0;
-//srand(time(NULL));
-//printf("%d %d\n", rand() % 100, rand());
-//int max = data[0]; //0
-//int min = data [0]; // 9999
-//for (int i = 0; i < cnt; i++) {
-//	total+= data[i];
+        printf("data[%d] = %d\n", i, data[i]);
+        printf("data[%d]'s address = %p\n", i, &data[i]);
 
+        total += data[i];
 
- /*	data[i] = rand() % 100 + 1; //1 ~100
-	printf("%3d", data[i]);
-	i % 10 ? printf("") : printf("\n");
-	//total += data[i];*/
+        if (i == 0) {
+            max = data[i];
+            min = data[i];
+        }
 
-	//printf("data[%d] =%d \n", i, data[i]);
-	//printf("data[%d]ÀÇ ÁÖ¼Ò =%p\n", i, &data[i]);
+        int max1 = max;
+        int min1 = min;
 
+        if (data[i] >= max1) {
+            max = data[i];
+        }
+        if (data[i] <= min1) {
+            min = data[i];
+        }
+    }
 
-//printf("ÃÑÁ¡ =%d\n", total);
-//printf("Æò±Õ =%.2f\n", total / (float)cnt); // total ¾Õ¿¡ (float)ºÙ¿©µµ µÊ cnt´Â 100ÇÏ¸é 100°³ ¸¸µë
+    printf("total = %d\n", total);
+    printf("average = %.2f\n", total / (float)5);
+    printf("max is %d\n", max);
+    printf("min is %d\n", min);
 
-/*printf("Á¡¼ö ÀÔ·Â =>");
-scanf("%d", &data[i]);
+    return 0;
 }*/
-/*for (int i = 0; i < 5; i++) {
-	printf("data[%d] =%d \n",i,data[i]);
-	printf("data[%d]ÀÇ ÁÖ¼Ò =%p\n", i, &data[i]);
-}*/
-/*	for (int i = 0; i < cnt; i++) {
-		if (max <= data[i])
-			max = data[i];
-	}
-	printf("ÃÖ´ñ°ªÀº %d ", max);
 
-	for (int i = 0; i < cnt; i++) {
-		if (min > data[i])
-			min = data[i];
-	}
-	printf("ÃÖ¼Ò°ªÀº %d ", min);*/
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-int main() {
-	int data[5][2] = { 80,90,50,70,90,80,70,50,90,80 };
-	int total1 = 0;
-	int total2 = 0; // [0][0][0][1]
-	for (int j = 0; j < 5; j++) {
-		int sum1 = 0;
-		for (int i = 0; i < 2; i++) {
-			printf("%d\t", data[j][i]);
-			sum1 += data[j][i];
-			printf("%d\n", sum1);
-			sum1 += data[j][i];
-			if (i == 0) {
-				//printf(" ");
-				total1 += data[j][i];
-			}
-			else {
-				total2 += data[j][i];
-			}
-		}
-		printf("\n");
-	}
-	printf("ÃÑÇÕÀº %d\t %d\n", total1, total2);
-	printf("Æò±ÕÀº %.2lf\t %.2lf\n", total1 / (float)5, total2 / (float)5);
-	return 0;
-}
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-#include <time.h>
-#include <stdlib.h>
-#define cnt 100
-int main() {
-	int sum = 0, sum1 = 0, total = 0;
-	int arr[5][2] = { {80,90},{50,70},{90,80},{70,50},{90,80} };
-	printf("\tÁß°£\t±â¸»\t  ÃÑÇÕ\tÆò±Õ\n");
-	for (int i = 0; i < 5; i++) {
-		total = 0;
-		printf("ÇĞ»ı %d\t", i + 1);
-		for (int j = 0; j < 2; j++) {
-			printf("%3d\t ", arr[i][j]);
-			total += arr[i][j];
-		}
-		printf(" %d\t", total);
-		printf(" %.f\t", total / 2.0);
 
-		sum += arr[i][0];
-		sum1 += +arr[i][1];
-		printf("\n");
-	}
-
-	printf(" ÃÑÇÕ\t%d\t%d\n", sum, sum1);
-	printf(" Æò±Õ\t%.2f\t%2.f", sum / 5.0, sum1 / 5.0);
-	return 0;
-}
