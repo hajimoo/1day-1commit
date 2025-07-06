@@ -41,5 +41,38 @@ int main()
 		}
 		printf("\n");
 	}*/
+	int sum=0;
+	int arr[5];
+	int max ;
+	int min ;
+	printf("정수 5개 입력:\n");
+	for (int i = 0; i < 5; i++) {
+		scanf_s("%d", &arr[i]);
+	}
+	max = arr[0];// 최대 최소 값을 비교하려면 일단 입력을 해야 하므로
+	min = arr[0];
+	printf("순차 출력:\n");
+	for (int i = 0; i < 5; i++) {
+		printf("arr[%d]: %d\n", i, arr[i]);
+	}
+	printf("배열 전체 출력: "); // 순차출력은 반복문 안에 \n 전체출력은 반복문 밖에 \n
+	for (int i = 0; i < 5; i++) {
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+	for (int i = 0; i < 5; i++) {
+		sum += arr[i];
+	}
+	printf("배열의 합: %d\n", sum);
+	for (int i = 1; i < 5; i++) {
+		if (arr[i] > max) {
+			max = arr[i];
+		}
+		if (arr[i] < min) {
+			min = arr[i];
+		}
+	}
+	printf("배열의 최댓값: %d\n", max);
+	printf("배열의 최솟값: %d\n", min);
 	return 0;
 }
