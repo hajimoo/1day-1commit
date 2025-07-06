@@ -41,7 +41,7 @@ int main()
 		}
 		printf("\n");
 	}*/
-	int sum=0;
+	/*int sum=0;
 	int arr[5];
 	int max ;
 	int min ;
@@ -73,6 +73,6 @@ int main()
 		}
 	}
 	printf("배열의 최댓값: %d\n", max);
-	printf("배열의 최솟값: %d\n", min);
+	printf("배열의 최솟값: %d\n", min);*/
 	return 0;
 }
