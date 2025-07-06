@@ -18,7 +18,7 @@ int main()
 		age = (2025 - year) - 1;
 	}
 	printf("\n안녕하세요.\n저는 이름이 %s이고, 만 %d살입니다.\n", name, age);
-	/*&는 주소로 scanf일때 입력시 쓰지만,printf는 그대로*/
+	//&는 주소로 scanf일때 입력시 쓰지만,printf는 그대로
 	printf("성별은 ");
 	switch (gender)
 	{
@@ -33,6 +33,13 @@ int main()
 		break;
 	}
 	printf("이고, 키는 %.1fcm입니다.",height);*/
-	
+	/*	for (int i = 1; i <= 5; i++) {
+		for (int j = 5; i <= j; j--) //이중 for문 순서 안쪽 for문을 바깥쪽 for문 초기조건까지 만족시킴->바깥쪽 for문 실행 ->안쪽 for문을 실행하고 바깥쪽 for문 실행 (의미는 바깥쪽 초기화(i=1) -> 안쪽 반복(j = 5→i) ->바깥쪽 증가(i++)->조건 다시 검사->반복)
+
+		{
+			printf("'#'");
+		}
+		printf("\n");
+	}*/
 	return 0;
 }
