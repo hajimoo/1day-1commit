@@ -69,5 +69,34 @@ int main() {
 
     return 0;
 }*/
+/*#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+#define cnt 100
+//int main() {
+//	int data[5][2] = { {80,90},{50,70},{90,80},{70,50},{90,80} };// 배열에서 첫번째는 행 두번째는 열로 표현
+//	int sum = 0;
+//	int sum1 = 0;
+//	printf("\t중간\t기말\t 총합\t평균\n");
+//	for (int i = 0; i < 5; i++) {
+//		int total = 0;// 총합을 학생 개별적으로 구하려면 total은 반복문앞에 존재해야 함
+//		printf("student %d\t",i+1);
+//		for (int j = 0; j < 2; j++) {
+//			printf("%3d", data[i][j]);
+//			total += data[i][j];//total이 for j문 안에 있어야 하는 이유는 이 data 배열이 j를 포함하기때문
+//		}
+//		printf(" %d\t", total);
+//		printf("%.f\t", total / 2.0);
+//		
+//		sum += data[i][0];
+//		sum1 += data[i][1];
+//		printf("\n");
+//	}
+//	printf(" 총합\t%d\t%d\n", sum, sum1);
+//	printf(" 평균\t%.2f\t%2.f", sum / 5.0, sum1 / 5.0);
+//	return 0;
+//}
+*/
 
 
