@@ -109,6 +109,43 @@ while (1) {
             printf("검색 실패\n");
         }
     }*/
+/* 이게 진짜 정답 
+  void chf1(int a) {
+	srand(time(NULL));
+	for (int i = 0; i < 100; i++) {
+		numbers[i] = rand() % 100 + 1;
+	}
+}
+	int i;
+	int a;
+	char ch;
+
+	chf1(3);
+	printf("100개의 정수가 생성되었습니다.!!!\n");
+
+	for (;;) {
+		printf("탐색하고자 하는 수를 입력하세요(종료 X)=>");
+		if (scanf("%d", &a) != 1) {
+
+			scanf("%c", &ch);
+
+			if (ch == 'x' || ch == 'X') {
+				printf("프로그램 종료\n");
+				break;
+			}
+			continue;
+		}
+
+		for (i = 0; i < 100; i++) {
+			if (a == numbers[i]) {
+				printf("검색 성공!!\n");
+				break;
+			}
+		}
+		if (i == 100)
+			printf("검색 실패\n");
+	} */
+
 
 
     return 0;
