@@ -5,12 +5,12 @@
 #include <stdio.h>
 #include<stdlib.h>
 #include<time.h>
-//void uf1(); //ÇÔ¼ö ¿øÇü //ÇÔ¼ö ¼±¾ğ
+//void uf1(); //í•¨ìˆ˜ ì›í˜• //í•¨ìˆ˜ ì„ ì–¸
 //int udf2() {
 //	srand(time(NULL));
 //	/*int ran = rand() % 10 + 1;
 //	return ran;*/
-//	return rand() % 10 + 1;// 1~10 Áß ÀÓÀÇÀÇ Á¤¼ö
+//	return rand() % 10 + 1;// 1~10 ì¤‘ ì„ì˜ì˜ ì •ìˆ˜
 //}
 //void  udf3(int a, int b) {
 //	printf("%d / %d = %d\n", a, b, a / b);
@@ -21,73 +21,73 @@
 //	for (int i = 1; i <= n; i++) {
 //		factorial *= i;
 //	}
-//	return factorial;
+//	return factorial; //voidëŠ” returnì´ ì—†ì–´ì„œ udf4ë¥¼ í•˜ë©´ ë int udf4 return factorialì´ë¼ê³  í•˜ë©´ udf4ì˜ ê°’ì´ factorialìœ¼ë¡œ returnë˜ì„œ ì‚¬ìš©ë¨
 //}
-// call by value ¹æ½Ä
+// call by value ë°©ì‹
 //void swap(int x,int y) { // a=10 b=20
 //	int tmp;
-//	printf("swap ÇÔ¼ö ³»:");
+//	printf("swap í•¨ìˆ˜ ë‚´:");
 //	printf("x=%d y=%d\n", x, y);
 //	tmp = x;
 //	x = y;
 //	y = tmp;
-//	printf("swap ÇÔ¼ö ³» ±³È¯ ÈÄ:");
+//	printf("swap í•¨ìˆ˜ ë‚´ êµí™˜ í›„:");
 //	printf("x=%d y=%d\n", x, y);
 //}
 void swap(int* x, int* y) { // & *
 	int tmp;
-	printf("swap ÇÔ¼ö ³»:");
+	printf("swap í•¨ìˆ˜ ë‚´:");
 	printf("x=%d y=%d\n", *x, *y);
 	tmp = *x;
 	*x = *y;
 	*y = tmp;
 
-	printf("swap ÇÔ¼ö ³» ±³È¯ ÈÄ:");
+	printf("swap í•¨ìˆ˜ ë‚´ êµí™˜ í›„:");
 	printf("x=%d y=%d\n", *x, *y);
 }
 void main() {
 	int x = 10; int y = 20;
-	printf("±³È¯ Àü: ");
+	printf("êµí™˜ ì „: ");
 	printf("x=%d y=%d\n", x, y);
 	swap(&x, &y);
-	printf("±³È¯ ÈÄ: ");
+	printf("êµí™˜ í›„: ");
 	printf("x=%d y=%d\n", x, y);
 	//long long  x =10;
-	//long long *xp; //Æ÷ÀÎÅÍ°¡ ÃÑ 8byte·Î ¸Ş¸ğ¸®¿¡ ÀúÀå
-	//xp = &x; //xp¶ó´Â Æ÷ÀÎÅÍ¿¡ xÀÇ ÁÖ¼Ò¸¦ ÀÔ·Â
-	//printf("x =%ld,ÁÖ¼Ò =%p,Å©±â=%d \n", x, &x, sizeof(x));
-	//printf("xp = %p xp Å©±â= %d  xpÁÖ¼Ò =%p \n", xp,sizeof(xp),&xp);
+	//long long *xp; //í¬ì¸í„°ê°€ ì´ 8byteë¡œ ë©”ëª¨ë¦¬ì— ì €ì¥
+	//xp = &x; //xpë¼ëŠ” í¬ì¸í„°ì— xì˜ ì£¼ì†Œë¥¼ ì…ë ¥
+	//printf("x =%ld,ì£¼ì†Œ =%p,í¬ê¸°=%d \n", x, &x, sizeof(x));
+	//printf("xp = %p xp í¬ê¸°= %d  xpì£¼ì†Œ =%p \n", xp,sizeof(xp),&xp);
 
 	/*int x = 10; int y = 20;
-	printf("±³È¯ Àü: ");
+	printf("êµí™˜ ì „: ");
 	printf("x=%d y=%d\n", x, y);
 	swap(x, y);
-	printf("±³È¯ ÈÄ: ");
+	printf("êµí™˜ í›„: ");
 	printf("x=%d y=%d\n", x, y);*/
 	/*int n;*/
-	//int total = 0; //¹İµå½Ã 0À¸·Î ÃÊ±âÈ­ÇØ¾ß ´©Àû ÇÕ °è»êÀÌ ¿Ã¹Ù¸£°Ô µÊ. ÃÊ±âÈ­ÇÏÁö ¾ÊÀ¸¸é ¾²·¹±â °ªÀÌ µé¾î°¡ °á°ú°¡ ÀÌ»óÇØÁü.
-	//int factorial = 1; //ÆÑÅä¸®¾ó ÀÌ¹Ç·Î 0!=1·Î ÃÊ±âÈ­ ÇØ¾ß ¿Ã¹Ù¸£°Ô !°è»êÀÌ µÊ. ÀÌÀ¯´Â ´©Àû ÇÕ°ú µ¿ÀÏÇÔ
-//	uf1();//ÇÔ¼ö È£Ãâ
-//	/*printf("Á¤¼öÀÔ·Â=>");
+	//int total = 0; //ë°˜ë“œì‹œ 0ìœ¼ë¡œ ì´ˆê¸°í™”í•´ì•¼ ëˆ„ì  í•© ê³„ì‚°ì´ ì˜¬ë°”ë¥´ê²Œ ë¨. ì´ˆê¸°í™”í•˜ì§€ ì•Šìœ¼ë©´ ì“°ë ˆê¸° ê°’ì´ ë“¤ì–´ê°€ ê²°ê³¼ê°€ ì´ìƒí•´ì§.
+	//int factorial = 1; //íŒ©í† ë¦¬ì–¼ ì´ë¯€ë¡œ 0!=1ë¡œ ì´ˆê¸°í™” í•´ì•¼ ì˜¬ë°”ë¥´ê²Œ !ê³„ì‚°ì´ ë¨. ì´ìœ ëŠ” ëˆ„ì  í•©ê³¼ ë™ì¼í•¨
+//	uf1();//í•¨ìˆ˜ í˜¸ì¶œ
+//	/*printf("ì •ìˆ˜ì…ë ¥=>");
 //	scanf("%d", &n);*/
 //	n = udf2();
 //	udf3(10, 3);
-//	printf("%d!Àº %d\n",n, udf4(n));
+//	printf("%d!ì€ %d\n",n, udf4(n));
 //	/*for (int i = 1; i <= n; i++) {
 //	total += i;
 //	factorial *= i;
 //	}
-//	printf("%dºÎÅÍ 1±îÁöÀÇ ÇÕÀº %d\n", n,total);
-//	printf("%d!Àº %d\n",n, factorial);*/
+//	printf("%dë¶€í„° 1ê¹Œì§€ì˜ í•©ì€ %d\n", n,total);
+//	printf("%d!ì€ %d\n",n, factorial);*/
 //
 //	uf1();
 //}
 //
 //
 //
-//void uf1(void) { //ÇÔ¼öÁ¤ÀÇ
-//	printf("udf1 ÇÔ¼ö ½ÃÀÛ\n");
-//	printf("»ç¿ëÀÚ Á¤ÀÇ ÇÔ¼ö ½Ç½À´Ï´Ù. \n");
-//	printf("ÀÌ ÇÔ¼ö´Â ¸®ÅÏ°ªÀÌ ¾ø´Â voidÇü ÇÔ¼öÀÔ´Ï´Ù.\n");
-//	printf("udf1 ÇÔ¼ö Á¾·á\n");
+//void uf1(void) { //í•¨ìˆ˜ì •ì˜
+//	printf("udf1 í•¨ìˆ˜ ì‹œì‘\n");
+//	printf("ì‚¬ìš©ì ì •ì˜ í•¨ìˆ˜ ì‹¤ìŠµë‹ˆë‹¤. \n");
+//	printf("ì´ í•¨ìˆ˜ëŠ” ë¦¬í„´ê°’ì´ ì—†ëŠ” voidí˜• í•¨ìˆ˜ì…ë‹ˆë‹¤.\n");
+//	printf("udf1 í•¨ìˆ˜ ì¢…ë£Œ\n");
 }//
