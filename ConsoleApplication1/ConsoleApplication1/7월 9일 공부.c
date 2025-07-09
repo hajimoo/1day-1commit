@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+ï»¿#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 /*typedef struct fraction {
@@ -7,7 +7,7 @@
 }FRACTION;
 
 void read_trac(FRACTION* trac) {
-	printf("ºĞÀÚ, ºĞ¸ğ ÀÔ·Â: ");
+	printf("ë¶„ì, ë¶„ëª¨ ì…ë ¥: ");
 	scanf("%d %d", &trac->numer, &trac->demon);
 	printf("%d / %d ", trac->numer, trac->demon);
 }*/
@@ -17,20 +17,20 @@ void main() {
 	a = fgetc(stdin);
 	fputc(a, stdout);
 	fscanf(stdin, "%c", &a);
-	fprintf(stdout, "¾È³çÇÏ¼¼¿ä~~~%c\n", a); 0
+	fprintf(stdout, "ì•ˆë…•í•˜ì„¸ìš”~~~%c\n", a); 0
 	*/
 	/*
-	fp = fopen("output.txt", "w"); //¾²±â¿ë ÅØ½ºÆ® È­ÀÏ
-	fprintf(stdout, "¾È³çÇÏ¼¼¿ä~~~\n");
+	fp = fopen("output.txt", "w"); //ì“°ê¸°ìš© í…ìŠ¤íŠ¸ í™”ì¼
+	fprintf(stdout, "ì•ˆë…•í•˜ì„¸ìš”~~~\n");
 	for (int i = 1; i < 100; i++){
 		fprintf(fp, "%d", i);
 		fprintf(fp, "%f", i * 3.14);
-		fprintf(fp, "¾È³çÇÏ¼¼¿ä~~~\n");
+		fprintf(fp, "ì•ˆë…•í•˜ì„¸ìš”~~~\n");
 	}
 
 	fputc('y', fp);
 
-	fputs("¾È³çÇÏ¼¼¿ä fputs",fp);
+	fputs("ì•ˆë…•í•˜ì„¸ìš” fputs",fp);
 
 	fclose(fp);1
 	*/
@@ -43,12 +43,12 @@ void main() {
 			total += arr[i];
 			printf("% d", arr[i]);
 		}
-		printf("µéÀÇ ÃÑÇÕÀº %d ", total);
+		printf("ë“¤ì˜ ì´í•©ì€ %d ", total);
 
 		for (int i = 0; i < 10; i++) {
 			fprintf(fpw,"% d", arr[i]);
 		}
-		fprintf(fpw,"µéÀÇ ÃÑÇÕÀº %d ", total);
+		fprintf(fpw,"ë“¤ì˜ ì´í•©ì€ %d ", total);
 		fclose(fp);
 		fclose(fpw); 2
 		*/
@@ -56,7 +56,7 @@ void main() {
 		fpw = fopen("result1.txt", "wb");
 
 		int arr[256];
-		fread(arr, 4,10,fp); //arr°ªÀ» 4¹ÙÀÌÆ®½Ä 10¹ø ¹İº¹ÇØ¼­ fp·Î ÀĞ¾îµå·Á¿À±â
+		fread(arr, 4,10,fp); //arrê°’ì„ 4ë°”ì´íŠ¸ì‹ 10ë²ˆ ë°˜ë³µí•´ì„œ fpë¡œ ì½ì–´ë“œë ¤ì˜¤ê¸°
 		fwrite(arr, 4, 10, fpw);
 		fclose(fp);
 		fclose(fpw); 3
@@ -76,12 +76,12 @@ void main() {
 		/*int i;
 		int* data ;
 		int cnt;
-		printf("ÇĞ»ı¼ö =>");
+		printf("í•™ìƒìˆ˜ =>");
 		scanf("%d", &cnt);
 
 		data = (int*)malloc(cnt * sizeof(int));
 		for (i = 0; i < cnt; i++) {
-			printf("ÀÔ·Â => ");
+			printf("ì…ë ¥ => ");
 			scanf("%d", &data[i]);
 		}
 		for (i = 0; i < cnt; i++)
